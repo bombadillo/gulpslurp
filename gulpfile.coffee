@@ -49,4 +49,4 @@ gulp.task "htmlreplace", ->
     .pipe(gulp.dest "")
 
 gulp.task "watch", ->
-  gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify"]
+  gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify", "htmlreplace"]
