@@ -1,6 +1,9 @@
-Sales = require "./functions/sales"
-{Animal} = require "./models/characters"
+"use strict"
 
-animal = new Animal
-   
-Sales.performSales(animal)
+angular = require "angular"
+
+WelcomeCtrl = require "./controllers/welcome"
+
+app = angular.module('myApp', [])
+
+app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);

@@ -9,6 +9,4 @@ performSales = (animal) ->
     animal.sell(new Customer "Peter")
     animal.sell(new Customer "David")
 
-
-exports = this
-exports.performSales = performSales
+module.exports.performSales = performSales

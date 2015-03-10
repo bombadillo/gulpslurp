@@ -14,6 +14,6 @@ class Customer
     sayName: ->
         console.log "my name is " + @name
 
-exports = this
-exports.Animal = Animal
-exports.Customer = Customer
+
+module.exports.Animal = Animal
+module.exports.Customer = Customer
