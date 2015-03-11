@@ -45,9 +45,10 @@ gulp.task "browserify", ->
 gulp.task "htmlreplace", ->
   gulp.src "index.html"
     .pipe htmlreplace(
-      "js": "public/js/bundle.js"
+      "js": "public/js/bundle.js",
+      "css": "public/assets/css/styles.css"
     )
     .pipe(gulp.dest "")
 
 gulp.task "watch", ->
-  gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify", "htmlreplace"]
+  gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify"]
