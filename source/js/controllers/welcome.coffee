@@ -7,6 +7,6 @@ animal = new characters.Animal
 functions.performSales animal
 
 WelcomeCtrl = ($scope) ->
-  $scope.testVar = "Booya!"
+  $scope.testVar = "Yes!"
 
 module.exports = WelcomeCtrl;

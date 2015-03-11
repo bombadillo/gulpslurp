@@ -52,3 +52,4 @@ gulp.task "htmlreplace", ->
 
 gulp.task "watch", ->
   gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify"]
+  gulp.watch "source/less/**/*.less", ["buildcss"]
