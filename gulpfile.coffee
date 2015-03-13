@@ -36,7 +36,7 @@ gulp.task "hotcoffee", ->
     .pipe(coffee(bare: true).on("error", gutil.log))
     .pipe(gulp.dest "source")
 
-gulp.task "browserify", ->
+gulp.task "browserify", ["hotcoffee"], ->
   browserify "./source/js/app.js"
     .bundle()
     .pipe(source "bundle.js")
@@ -53,3 +53,5 @@ gulp.task "htmlreplace", ->
 gulp.task "watch", ->
   gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify"]
   gulp.watch "source/less/**/*.less", ["buildcss"]
+
+gulp.task "buildall", ["hotcoffee", "browserify", "buildcss"]
