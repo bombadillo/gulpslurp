@@ -21,7 +21,6 @@ module.exports = ($rootScope, $location, fileChecker, httpValidator) ->
 
     onPathExistsFail: (response) ->
       console.log "Failed to get CSS"
-      console.log response
 
   $rootScope.$on "$routeChangeStart", (event, next, current) ->
     path = "/public/assets/css/routes#{$location.path()}.css"
