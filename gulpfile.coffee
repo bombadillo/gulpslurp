@@ -50,8 +50,12 @@ gulp.task "htmlreplace", ->
     )
     .pipe(gulp.dest "")
 
+gulp.task "movepublicfiles", ["browserify"], ->
+  gulp.src ["source/js/templates/*"]
+  .pipe gulp.dest "public/js/templates"
+
 gulp.task "watch", ->
-  gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify"]
+  gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify", "movepublicfiles"]
   gulp.watch "source/less/**/*.less", ["buildcss"]
 
-gulp.task "buildall", ["hotcoffee", "browserify", "buildcss"]
+gulp.task "buildall", ["hotcoffee", "browserify", "buildcss", "movepublicfiles"]

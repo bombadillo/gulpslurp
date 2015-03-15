@@ -4,22 +4,19 @@
   <link rel="stylesheet" href="public/assets/css/styles.css">
   <title>My Awesome App</title>
 </head>
-<body ng-controller='WelcomeCtrl'>
+<body>
 
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
 
-        <div class="jumbotron text-center">
-          <h1>Is Angular running?</h1>
-          <p class="label label-default" ng-class="{'label-success': 1}">{{testVar}}</p>
-        </div>
+        <div ng-view></div>
 
       </div>
     </div>
   </div>
 
-
   <script src="public/js/bundle.js"></script>
+
 </body>
 </html>

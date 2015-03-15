@@ -1,9 +1,10 @@
 "use strict"
 
 angular = require "angular"
+require "angular-route/angular-route"
 
-WelcomeCtrl = require "./controllers/welcome"
+app = angular.module("myApp", ["ngRoute"])
 
-app = angular.module("myApp", [require "angular-route"])
+app.config require "./routes"
 
-app.controller("WelcomeCtrl", ["$scope", WelcomeCtrl]);
+#app.controller("WelcomeCtrl", ["$scope", WelcomeCtrl]);
