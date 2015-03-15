@@ -1,3 +1,5 @@
+"use strict"
+
 {Customer} = require "../models/characters"
 
 performSales = (animal) ->

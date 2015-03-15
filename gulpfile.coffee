@@ -57,5 +57,6 @@ gulp.task "movepublicfiles", ["browserify"], ->
 gulp.task "watch", ->
   gulp.watch "source/**/*.coffee", ["hotcoffee", "browserify", "movepublicfiles"]
   gulp.watch "source/less/**/*.less", ["buildcss"]
+  gulp.watch "source/js/templates/*", ["movepublicfiles"]
 
 gulp.task "buildall", ["hotcoffee", "browserify", "buildcss", "movepublicfiles"]
