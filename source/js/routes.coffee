@@ -1,7 +1,9 @@
-fs = require "fs"
+"use strict"
 
 module.exports = ($routeProvider) ->
   $routeProvider
-    .when "/", ->
+    .when "/",
       controller: require "./controllers/welcome"
-      template: fs.readFileSync("../templates/welcome.html")
+      templateUrl: "public/js/templates/welcome.html"
+    .otherwise redirectTo: "/jobby"
+ 
